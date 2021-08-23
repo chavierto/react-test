@@ -5,8 +5,8 @@ import KanyeDaily from './KanyeDaily';
 import PokemonList from './PokemonList';
 
 function App() {
-	const [kanyeQuote, setKanyeQuote] = useState({});
-	const [pokemons, setPokemons] = useState([]);
+	const [kanyeQuote, setKanyeQuote] = useState();
+	const [pokemons, setPokemons] = useState();
 
 	useEffect(() => {
 		async function getQuote() {
