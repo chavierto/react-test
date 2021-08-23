@@ -9,11 +9,11 @@ function PokemonList(props) {
 	return (
 		<div>
 			<h3>Pokemons</h3>
-			<div>
+			<div className='pokeGrid'>
 				{pokemons &&
 					pokemons.map((pokemon, i) => {
 						return (
-							<div key={pokemon.name}>
+							<div className='pokeCard' key={pokemon.name}>
 								<img
 									className='pokeImage'
 									src={`${imageLink}${i + 1}.png`}
