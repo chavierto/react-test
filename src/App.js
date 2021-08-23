@@ -19,7 +19,7 @@ function App() {
 	return (
 		<div className='App'>
 			<h1>React Test</h1>
-			<KanyeDaily></KanyeDaily>
+			<KanyeDaily kanyeQuote={kanyeQuote} />
 		</div>
 	);
 }

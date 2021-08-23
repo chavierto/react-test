@@ -1,11 +1,12 @@
 import React from 'react';
 
-function KanyeDaily(props) {
-	const quotes = props;
+function KanyeDaily(kanyeQuote) {
+	const quote = kanyeQuote.kanyeQuote.data.quote;
+	console.log(kanyeQuote);
 	return (
 		<div>
 			<h3>Kanye Of The Day</h3>
-			<div className='quote'>Quote</div>
+			<div className='quote'>{`${quote}`}</div>
 		</div>
 	);
 }
