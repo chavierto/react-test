@@ -1,7 +1,10 @@
 import React from 'react';
+import './App.css';
 
 function PokemonList(props) {
 	const pokemons = props.pokemons;
+	const imageLink =
+		'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
 
 	return (
 		<div>
@@ -10,14 +13,14 @@ function PokemonList(props) {
 				{pokemons &&
 					pokemons.map((pokemon, i) => {
 						return (
-							<div>
-								<div>
-									<img
-										src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${i+1}.png`}
-										alt=''
-									/>
-								</div>
-								<div key={pokemon.name}>{`${pokemon.name}`}</div>
+							<div key={pokemon.name}>
+								<img
+									className='pokeImage'
+									src={`${imageLink}${i + 1}.png`}
+									alt=''
+								/>
+
+								<div>{`${pokemon.name}`}</div>
 							</div>
 						);
 					})}
