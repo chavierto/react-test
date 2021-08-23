@@ -8,8 +8,18 @@ function PokemonList(props) {
 			<h3>Pokemons</h3>
 			<div>
 				{pokemons &&
-					pokemons.map((pokemon) => {
-						return <div key={pokemon.name}>{`${pokemon.name}`}</div>;
+					pokemons.map((pokemon, i) => {
+						return (
+							<div>
+								<div>
+									<img
+										src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${i+1}.png`}
+										alt=''
+									/>
+								</div>
+								<div key={pokemon.name}>{`${pokemon.name}`}</div>
+							</div>
+						);
 					})}
 			</div>
 		</div>
