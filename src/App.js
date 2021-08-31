@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { Router, Redirect } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import './App.css';
 import KanyeDaily from './KanyeDaily';
 import PokemonList from './PokemonList';
