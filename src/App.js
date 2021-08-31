@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { Router, Redirect } from 'react-router-dom';
 import './App.css';
 import KanyeDaily from './KanyeDaily';
 import PokemonList from './PokemonList';
@@ -7,6 +8,7 @@ import PokemonList from './PokemonList';
 function App() {
 	const [kanyeQuote, setKanyeQuote] = useState();
 	const [pokemons, setPokemons] = useState();
+	const [chosenPokemon, setChosenPokemon] = useState('');
 
 	useEffect(() => {
 		async function getQuote() {
@@ -31,9 +33,15 @@ function App() {
 
 	return (
 		<div className='App'>
-			<h1>React Test</h1>
-			<KanyeDaily kanyeQuote={kanyeQuote} />
-			<PokemonList pokemons={pokemons} />
+			<nav>
+				<h1>React Test</h1>
+				<KanyeDaily kanyeQuote={kanyeQuote} />
+			</nav>
+			<PokemonList
+				pokemons={pokemons}
+				setChosenPokemon={setChosenPokemon}
+				chosenPokemon={chosenPokemon}
+			/>
 		</div>
 	);
 }
