@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter, Link } from 'react-router-dom';
 import './App.css';
 
 function PokemonList(props) {
@@ -17,12 +18,14 @@ function PokemonList(props) {
 							<div
 								className='pokeCard'
 								key={pokemon.name}
-								onClick={(e) => setChosenPokemon(pokemon.url)}>
-								<img
-									className='pokeImage'
-									src={`${imageLink}${i + 1}.png`}
-									alt=''
-								/>
+								onClick={(e) => setChosenPokemon(pokemon)}>
+								<Link to='/:chosenPokemon.name'>
+									<img
+										className='pokeImage'
+										src={`${imageLink}${i + 1}.png`}
+										alt=''
+									/>
+								</Link>
 
 								<div>{`${pokemon.name}`}</div>
 							</div>
@@ -33,4 +36,4 @@ function PokemonList(props) {
 	);
 }
 
-export default PokemonList;
+export default withRouter(PokemonList);

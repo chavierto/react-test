@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Redirect, Switch, Link, withRouter } from 'react-router-dom';
 import './App.css';
 import KanyeDaily from './KanyeDaily';
 import PokemonList from './PokemonList';
+import PokemonPage from './PokemonPage';
 
 function App() {
 	const [kanyeQuote, setKanyeQuote] = useState();
@@ -34,16 +35,31 @@ function App() {
 	return (
 		<div className='App'>
 			<nav>
-				<h1>React Test</h1>
+				<h1>
+					<Link to='/'>React Test</Link>
+				</h1>
 				<KanyeDaily kanyeQuote={kanyeQuote} />
 			</nav>
-			<PokemonList
-				pokemons={pokemons}
-				setChosenPokemon={setChosenPokemon}
-				chosenPokemon={chosenPokemon}
-			/>
+
+			<Switch>
+				<Route
+					path='/home'
+					render={() => (
+						<PokemonList
+							pokemons={pokemons}
+							setChosenPokemon={setChosenPokemon}
+							chosenPokemon={chosenPokemon}
+						/>
+					)}
+				/>
+				<Route path='/' exact render={() => <Redirect to='/home' />} />
+				<Route
+					path='/:pokemon.name'
+					render={() => <PokemonPage chosenPokemon={chosenPokemon} />}
+				/>
+			</Switch>
 		</div>
 	);
 }
 
-export default App;
+export default withRouter(App);
