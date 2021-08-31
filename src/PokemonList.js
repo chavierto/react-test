@@ -6,10 +6,6 @@ function PokemonList(props) {
 	const pokemons = props.pokemons;
 	const imageLink =
 		'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
-	const handleSubmit = (event) => {
-		event.preventDefault();
-		setChosenPokemon();
-	};
 
 	return (
 		<div>
