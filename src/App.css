@@ -27,6 +27,7 @@
 	cursor: pointer;
 	/* box-shadow: 4px 4px #00000077; */
 	transform: scale(1.03);
+	background-color: #bbbbbb;
 }
 
 .cardTitle {
