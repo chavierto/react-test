@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { Route, Redirect, Switch, Link, withRouter } from 'react-router-dom';
+import { Route, Redirect, Switch, Link } from 'react-router-dom';
 import './App.css';
 import KanyeDaily from './KanyeDaily';
 import PokemonList from './PokemonList';
@@ -54,7 +54,7 @@ function App() {
 				/>
 				<Route path='/' exact render={() => <Redirect to='/home' />} />
 				<Route
-					path='/:pokemon.name'
+					path='/:chosenPokemon.name'
 					render={() => <PokemonPage chosenPokemon={chosenPokemon} />}
 				/>
 			</Switch>
@@ -62,4 +62,4 @@ function App() {
 	);
 }
 
-export default withRouter(App);
+export default App;

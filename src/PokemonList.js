@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 function PokemonList(props) {
@@ -21,7 +21,7 @@ function PokemonList(props) {
 								onClick={(e) => setChosenPokemon(pokemon)}>
 								<Link to='/:chosenPokemon.name'>
 									<img
-										className='pokeImage'
+										className='pokeThumb'
 										src={`${imageLink}${i + 1}.png`}
 										alt=''
 									/>
@@ -36,4 +36,4 @@ function PokemonList(props) {
 	);
 }
 
-export default withRouter(PokemonList);
+export default PokemonList;

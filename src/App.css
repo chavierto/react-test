@@ -8,10 +8,13 @@
 	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 	padding: 1rem;
 }
-.pokeImage {
+.pokeThumb {
 	width: 100px;
 }
 
+.pokeImage {
+	width: fit-content;
+}
 .pokeCard:hover {
 	cursor: pointer;
 	/* box-shadow: 4px 4px #00000077; */
