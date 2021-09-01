@@ -54,7 +54,7 @@ function App() {
 				/>
 				<Route path='/' exact render={() => <Redirect to='/home' />} />
 				<Route
-					path='/:chosenPokemon.name'
+					path='/:pokemon.name'
 					render={() => <PokemonPage chosenPokemon={chosenPokemon} />}
 				/>
 			</Switch>

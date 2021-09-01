@@ -14,6 +14,7 @@ function PokemonList(props) {
 					pokemons.map((pokemon, i) => {
 						return (
 							<PokemonCard
+								key={i}
 								pokemon={pokemon}
 								i={i}
 								setChosenPokemon={setChosenPokemon}

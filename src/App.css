@@ -5,18 +5,35 @@
 .pokeGrid {
 	display: grid;
 	column-gap: 1rem;
+	row-gap: 1rem;
 	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 	padding: 1rem;
 }
 .pokeThumb {
 	width: 100px;
+	padding: 0.3rem;
 }
 
 .pokeImage {
-	width: ;
+	width: 80vw;
+}
+
+.pokeCard {
+	border-radius: 15px;
+	background-color: #dddddd;
+	transition: 0.05s;
 }
 .pokeCard:hover {
 	cursor: pointer;
 	/* box-shadow: 4px 4px #00000077; */
 	transform: scale(1.03);
+}
+
+.cardTitle {
+	background-color: #eeeeee;
+	border-radius: 0 0 15px 15px;
+	padding: 0.5rem;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: #555555;
+	text-transform: capitalize;
 }
