@@ -8,7 +8,7 @@ function PokemonPage(props) {
 		'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
 
 	return (
-		<div>
+		<div className='container'>
 			<h1>{`${pokemon.name}`}</h1>
 			<img
 				className='pokeImage'
