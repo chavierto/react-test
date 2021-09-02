@@ -14,11 +14,10 @@ function PokemonCard(props) {
 			className='pokeCard'
 			key={i}
 			onClick={(e) => setChosenPokemon(pokemon)}>
-			<Link to='/:pokemon.name'>
+			<Link className='link' to='/:pokemon.name'>
 				<img className='pokeThumb' src={`${imageLink}${i + 1}.png`} alt='' />
+				<div className='cardTitle'>{`${pokemon.name}`}</div>
 			</Link>
-
-			<div className='cardTitle'>{`${pokemon.name}`}</div>
 		</div>
 	);
 }
