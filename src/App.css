@@ -54,6 +54,7 @@
 
 	.pokeCard {
 		flex-direction: column;
+		margin: 0;
 	}
 
 	.link {
